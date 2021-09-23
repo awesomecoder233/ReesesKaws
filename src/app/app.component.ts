@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+//import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ReesesKaws';
+  title="ReesesKaws";
+  constructor(private router: Router) {
+    this.router.navigateByUrl('/login');
+  }  
 }
+
