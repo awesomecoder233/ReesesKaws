@@ -12,7 +12,7 @@ import { AuthService } from './user/auth.service';
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

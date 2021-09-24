@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PuffsDashboard:build:production"
+              "browserTarget": "ReesesKaws:build:production"
             },
             "development": {
-              "browserTarget": "PuffsDashboard:build:development"
+              "browserTarget": "ReesesKaws:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PuffsDashboard:build"
+            "browserTarget": "ReesesKaws:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "PuffsDashboard"
+  "defaultProject": "ReesesKaws"
 }
