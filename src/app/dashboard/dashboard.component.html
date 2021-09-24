@@ -1,5 +1,4 @@
 <app-header></app-header>
-
 <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
     <app-sidebar></app-sidebar>
@@ -7,7 +6,49 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
       <div class="container-fluid">
-        
+        <form>
+          <div class="row">
+            <label for="inputPassword" class="col-1 col-form-label">Information:</label>
+            <div class="col-2">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>App score</option>
+                <option value="1">App users</option>
+                <option value="2">App Game Play</option>
+                <option value="3">App Top 10</option>
+                <option value="3">Web Users</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <div class="form-check col-form-label">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Web
+                </label>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-check col-form-label">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  App
+                </label>
+              </div>
+            </div>
+            <label for="inputPassword" class="col-1 col-form-label">Location:</label>
+            <div class="col-2">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>New York</option>
+                <option value="1">Los Angelss</option>
+                <option value="2">Miami</option>
+                <option value="3">NY</option>
+                <option value="3">CA</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <div class="chart-area">
+          
+        </div>
       </div>
     </div>
 </div>
