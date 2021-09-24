@@ -13,30 +13,29 @@
                                 <form name="form" [formGroup]="loginForm" novalidate>
                                   <div class="form-group">
                                     <input id="inputEmail" type="email" placeholder="Email address" name="email" autofocus="" class="form-control" formControlName="email">
-                                    <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class=" alert-valid">
-                                      <div *ngIf="loginForm.controls['email'].errors?.required">
-                                        E-mail is required.
-                                      </div>
+                                    <div *ngIf="email && email.invalid && (email.dirty || email.touched)" class=" alert-valid">
+                                        <span *ngIf="email.errors?.required">Email address is required.</span>
+                                        <span *ngIf="email.errors?.email">Email address is invalid.</span>
                                     </div>
                                   </div>
                                   <div class="form-group">
-                                    <input id="inputPassword" type="password" placeholder="Password" name="password" autofocus="" class="form-control" formControlName="password">
-                                    <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert-valid">
-                                      <div *ngIf="loginForm.controls['password'].errors?.required">
-                                        Password is required.
+                                    <input id="inputAccessCode" type="text" placeholder="Accesscode" name="accesscode" autofocus="" class="form-control" formControlName="accessCode">
+                                    <div *ngIf="accessCode && accessCode.invalid && (accessCode.dirty || accessCode.touched)" class="alert-valid">
+                                      <div *ngIf="accessCode.errors?.required">
+                                        Accesscode is required.
                                       </div>
                                     </div>
                                   </div>
                                   <div class="form-group">
                                     <input id="inputToken" type="text" placeholder="Token" name="token" autofocus="" class="form-control" formControlName="token">
-                                    <div *ngIf="loginForm.controls['token'].invalid && (loginForm.controls['token'].dirty || loginForm.controls['token'].touched)" class=" alert-valid">
-                                      <div *ngIf="loginForm.controls['token'].errors?.required">
+                                    <div *ngIf="token && token.invalid && (token.dirty || token.touched)" class=" alert-valid">
+                                      <div *ngIf="token.errors?.required">
                                         Token is required.
                                       </div>
                                     </div>
                                   </div>
                                   <div class="custom-control mb-3">
-                                    <button [disabled]="loginForm.invalid" type="submit" (click)="onSubmit()" class="btn btn-primary btn-block mb-3 shadow-sm btn-signin">Sign in</button>
+                                    <button [disabled]="loginForm.invalid" type="submit" (click)="login()" class="btn btn-primary btn-block mb-3 shadow-sm btn-signin">Sign in</button>
                                   </div>
                                 </form>
                               </div>
